@@ -23,7 +23,7 @@
      var data = {
         notas:input.val(),
      }
-     firebase.firestore().collection('notas').doc('testing').add(data).then(function(snap){
+     firebase.firestore().collection('notas').add(data).then(function(snap){
         
      })
   });
