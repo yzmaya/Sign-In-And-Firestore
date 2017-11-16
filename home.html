@@ -13,11 +13,29 @@
   body { 
       position: relative; 
   }
-  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
   #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    h1{
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+    }
+    section #lista{
+      width: 50%
+      max-height: 20vh;
+      overflow-y: scroll;
+      padding-left: 35%;
+    }
+
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -62,19 +80,45 @@
   <img src="" id="imagencita" class="img-circle" width="80px">
  <br>
  
-   <input type="text"  id="texto" placeholder="escribe">
- <button  id="guardar" type="button">Guardar</button><br>
-
- <div id="caja"></div>
  </div>
  
 
 
 
 <div id="section2" class="container-fluid">
-  <h1>Section 2</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <section>
+    <div class="well" style="background-color: #009680;">
+      <h1>Girl's to date </h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Write and save the new contact</h3>
+        
+          
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Nombre">
+            </div>
+            <br><br>
+            <label for="number" class="col-sm-2 control-label">Phone</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="number" placeholder="Number" >
+            </div>
+            <br><br>
+            <div class="col-sm-offset-2 col-sm-10">
+              <button class="btn btn-default" onclick="saveNumber()">Save</button>
+            </div>
+          
+        
+      </div>
+      <div class="col-md-6">
+        <h3>Ladies List</h3>
+        <div id="lista">
+          
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <div id="section3" class="container-fluid">
   <h1>Section 3</h1>
@@ -93,7 +137,7 @@
 </div>
 
 
-<script type="text/javascript" src="js/sesion.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
